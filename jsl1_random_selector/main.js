@@ -1,7 +1,12 @@
 let foodImages = [
+//套版路徑
 "jsl1_random_selector/01.jpg",
 "jsl1_random_selector/02.jpg",
 "jsl1_random_selector/03.jpg"
+// "01.jpg",
+// "02.jpg",
+// "03.jpg"
+
 ];
 
 $(function(){

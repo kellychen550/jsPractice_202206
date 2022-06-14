@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="jsl2_club_course/style.css" rel="stylesheet">
+    <link href="jsl5_youtube_player/style.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
 </head>
@@ -34,8 +34,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="random_selector.html">RandomSelector</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">ClubCourse<span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="club_course.html">ClubCourse</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="mind_quiz.html">MindQuiz</a>
@@ -43,8 +43,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="simple_rpg.html">SimpleRPG</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="youtube_player.html">YoutubePlayer</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">YoutubePlayer<span class="sr-only">(current)</span></a>
                     </li>
                     <!-- <li class="nav-item">
               <a class="nav-link disabled" href="#">Disabled</a>
@@ -76,15 +76,18 @@
 
             <hr class="featurette-divider">
 
-            <h1>社團課程時間表</h1>
-            <table id="courseTable"></table>
-            設定第一場次活動日期 <input type="date" id="myDate" name="myDate"><br>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="topic.js"></script>
-            <script src="main.js"></script>
-            <!-- 後面載入的js可以使用前面js的東西 -->
-
-
+            <h1>YouTube 心情點唱機</h1>
+            <h2></h2>
+            <div id="player"></div>
+            <br>
+            <input id="playButton" type="button" value="play">
+    
+        
+             <script src="https://code.jquery.com/jquery-3.6.0.min.js" async defer></script>
+             <script src="https://www.youtube.com/iframe_api" async defer></script>
+             <script src="playList.js" async defer></script>
+            <script src="main.js" async defer></script>
+          
 
             <hr class="featurette-divider">
 
@@ -111,8 +114,8 @@
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="assets/js/vendor/holder.min.js"></script>
-    <script src="jsl2_club_course/topic.js"></script>
-    <script src="jsl2_club_course/main.js"></script>
+    <script src="jsl5_youtube_player/playList.js"></script>
+    <script src="jsl5_youtube_player/main.js"></script>
 </body>
 
 </html>

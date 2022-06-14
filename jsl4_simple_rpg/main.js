@@ -2,8 +2,12 @@ let mapArray, ctx, currentImgMain;
 let imgMountain, imgMain, imgEnemy;
 const gridLength = 200;
 var sources = {
-    Mountain:"images/material.png",
-    Enemy:"images/Enemy.png"
+    //單機版路徑
+    // Mountain:"images/material.png",
+    // Enemy:"images/Enemy.png"
+    //套版路徑
+    Mountain:"jsl4_simple_rpg/images/material.png",
+    Enemy:"jsl4_simple_rpg/images/Enemy.png"
 };
 function loadImages(sources, callback) {
     var images = {};
@@ -33,7 +37,8 @@ $(function(){
     ];
     ctx = $("#myCanvas")[0].getContext("2d");
     imgMain = new Image();
-    imgMain.src = "images/spriteSheet.png";
+    // imgMain.src = "images/spriteSheet.png";
+    imgMain.src = "jsl4_simple_rpg/images/spriteSheet.png";
     currentImgMain = {
         "x":0,
         "y":0
@@ -94,8 +99,9 @@ $(document).on("keydown",function(event){
     }
 
     event.preventDefault();
-
-    switch(event.code){
+    // let a = event.code
+    // console.log(a);
+    switch(event.key){            
         case "ArrowLeft":
             targetImg.x = currentImgMain.x - gridLength;
             targetImg.y = currentImgMain.y;
@@ -118,6 +124,7 @@ $(document).on("keydown",function(event){
             break;
         default:
             return;
+        // debugger;
     }
 
     if(targetImg.x<=400 && targetImg.x>=0 && targetImg.y<=400 && targetImg.y>=0){
